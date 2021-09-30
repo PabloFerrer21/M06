@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <!-- El formulario usa un controlador de eventos onsubmit para llamar a la función results (). La palabra clave return asegura que el valor devuelto por results () determinará si se envía el formulario.-->
+  <form onsubmit="event.preventDefault(); result();">
+    <h2>Escribe un nombre</h2>
+    <input id="name" type="text" name="name" />
+
+    <button type="submit" onclick="result">Envia tu informacion</button>
+  </form>
+  <script>
+    function result() {
+       var name = document.getElementById('name').value;
+       document.write("Hola ");
+        document.write(name + "<br/>");
+        return false;
+    }
+  </script>
+</body>
+
+</html>
